@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+         <groupId>ImageGallery</groupId>
+		<artifactId>main</artifactId>
+        <relativePath>./pom.xml</relativePath>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>ImageGallery</groupId>
+    <artifactId>ImageGallery</artifactId>
+    <packaging>swf</packaging>
+    <name>${project.artifactId}</name>
+    <description>${project.artifactId}-${project.version}</description>
+	
+	<properties>
+        <flex.sdk.version>4.6.b.23201</flex.sdk.version>
+        <flex.flashPlayer.command>
+			${basedir}/playerDebugger/flashplayer_11_sa_debug_32bit.exe
+        </flex.flashPlayer.command>
+		<skipTests>false</skipTests>
+    </properties>
+
+   <build>
+        <sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>tests</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.flexmojos</groupId>
+                <artifactId>flexmojos-maven-plugin</artifactId>
+                <version>4.2-beta</version>
+                <extensions>true</extensions>
+                   <configuration>
+					<compilerWarnings>
+						<warn-no-constructor>false</warn-no-constructor>
+					</compilerWarnings>
+				    <sourceFile>ImageGallery.mxml</sourceFile>
+                	<includeTestFiles>
+                        <includeTestFile>ImageGalleryTestSuite</includeTestFile>
+                    </includeTestFiles>
+                </configuration>
+				
+				 <dependencies>
+                    <dependency>
+                        <groupId>com.adobe.flex</groupId>
+                        <artifactId>compiler</artifactId>
+                        <version>${flex.sdk.version}</version>
+                        <type>pom</type>
+                    </dependency>
+                </dependencies>
+            </plugin>
+       <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.7</version>
+        <executions>
+          <execution>
+            <id>copy-images-for-testing</id>
+             <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/test-classes/assets</outputDirectory>
+               <resources>          
+                <resource>
+                  <directory>${basedir}/assets</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>              
+            </configuration>            
+          </execution>
+           <execution>
+            <id>copy-images-for-run</id>
+             <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+          
+              <outputDirectory>${basedir}/target/assets</outputDirectory>
+               <resources>          
+                <resource>
+                  <directory>${basedir}/assets</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>              
+            </configuration>            
+          </execution>
+        </executions>
+      </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.flex.framework</groupId>
+            <artifactId>flex-framework</artifactId>
+            <version>${flex.sdk.version}</version>
+            <type>pom</type>
+        </dependency>
+		
+		<dependency>
+             <groupId>ImageGallery</groupId>
+            <artifactId>signals</artifactId>
+            <version>0.8</version>
+            <type>swc</type>
+        </dependency>
+		
+		<dependency>
+             <groupId>ImageGallery</groupId>
+            <artifactId>signalsCommandMap</artifactId>
+            <version>0.9</version>
+            <type>swc</type>
+        </dependency>
+		
+		<dependency>
+             <groupId>ImageGallery</groupId>
+            <artifactId>robotlegs-framework</artifactId>
+            <version>1.5.2</version>
+            <type>swc</type>
+        </dependency>
+		
+		<dependency>
+            <groupId>ImageGallery</groupId>
+            <artifactId>greensock</artifactId>
+            <version>11.0</version>
+            <type>swc</type>
+        </dependency>
+		
+		<dependency>
+		  <groupId>com.adobe.flexunit</groupId>
+		  <artifactId>flexunit</artifactId>
+		  <version>4.0-rc-1</version>
+		  <type>swc</type>
+
+		</dependency>
+
+		</dependencies>
+		 <repositories>
+			<repository>
+				<id>flex-mojos-repository</id>
+				<url>http://repository.sonatype.org/content/groups/flexgroup</url>
+			</repository>
+		</repositories>
+
+		<pluginRepositories>
+			<pluginRepository>
+				<id>flex-mojos-plugin-repository</id>
+				<url>http://repository.sonatype.org/content/groups/flexgroup</url>
+			</pluginRepository>
+		</pluginRepositories>
+</project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+         <groupId>ImageGallery</groupId>
+		<artifactId>main</artifactId>
+        <relativePath>./pom.xml</relativePath>
+        <version>1.0</version>
+    </parent>
+	
+    <groupId>ImageGallery</groupId>
+    <artifactId>signals</artifactId>
+	<packaging>pom</packaging>
+    <version>0.8</version>
+    <name>${project.artifactId}-${project.version}</name>
+	
+	<properties>
+        <assets.path>${basedir}/libs/as3-signals-v0.8.swc</assets.path>
+    </properties>
+	
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.3.1</version>
+                <executions>
+                    <execution>
+                        <id>install-assets</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${assets.path}</file>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>${project.artifactId}</artifactId>
+                            <version>${project.version}</version>
+                            <packaging>swc</packaging>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+   
+</project>

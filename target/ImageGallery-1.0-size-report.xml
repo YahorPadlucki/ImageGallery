@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="631962" compressedSize="299126">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="440">
+      <data type="metaData" size="372"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="631522">
+      <frame name="_ImageGallery_mx_managers_SystemManager" size="56388" frame="1"/>
+      <frame name="ImageGallery" size="575134" frame="2"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="617212">
+      <abc name="frame2" size="560914" frame="2"/>
+      <abc name="frame1" size="56298" frame="1"/>
+    </actionScript>
+
+    <!-- defineSprite. -->
+    <sprites totalSize="38">
+      <sprite name="_class_embed_css_Assets_swf__686709978_mx_skins_cursor_BusyCursor_883826027" size="19" frame="2"/>
+      <sprite name="spark.skins.spark.ImageSkin__embed_mxml_Assets_swf___brokenImage_818059060" size="19" frame="2"/>
+    </sprites>
+
+    <!-- defineShape/2/3/4. -->
+    <shapes totalSize="296">
+      <shape size="261" frame="2"/>
+      <shape size="35" frame="2"/>
+    </shapes>
+
+    <!-- defineBits, definebitsJPEG2/3/4, or defineBitsLossless/2 -->
+    <bitmaps totalSize="143">
+      <bitmap size="143" frame="2"/>
+    </bitmaps>
+
+    <!-- SWF, Pixel Bender, or other miscellaneous embed data. -->
+    <binaryData totalSize="12506">
+      <data name="mx.graphics.shaderClasses.SaturationShader_ShaderClass" size="2298" frame="2"/>
+      <data name="mx.graphics.shaderClasses.HueShader_ShaderClass" size="2268" frame="2"/>
+      <data name="mx.graphics.shaderClasses.SoftLightShader_ShaderClass" size="1920" frame="2"/>
+      <data name="mx.graphics.shaderClasses.LuminosityShader_ShaderClass" size="1282" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorShader_ShaderClass" size="1272" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorBurnShader_ShaderClass" size="1144" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorDodgeShader_ShaderClass" size="1074" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ExclusionShader_ShaderClass" size="624" frame="2"/>
+      <data name="mx.graphics.shaderClasses.LuminosityMaskShader_ShaderClass" size="624" frame="2"/>
+    </binaryData>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="1327">
+      <tag type="symbolClass" size="665" frame="2"/>
+      <tag type="exportAssets" size="555" frame="2"/>
+      <tag type="symbolClass" size="46" frame="1"/>
+      <tag type="frameLabel" size="42" frame="1"/>
+      <tag type="frameLabel" size="15" frame="2"/>
+      <tag type="showFrame" size="2" frame="1"/>
+      <tag type="showFrame" size="2" frame="2"/>
+    </frameData>
+  </swf>
+</report>

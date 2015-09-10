@@ -1,0 +1,1 @@
+<testsuite errors='0' failures='0' name='cases.TestGalleryViewMediator' tests='2' time='0' ><testcase name="testViewSet" time="162"/><testcase name="testImageChangeOnClick" time="549"/></testsuite>
