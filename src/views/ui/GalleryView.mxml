@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<s:DataGroup xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+             itemRenderer="views.ui.renderer.ImageItemRenderer"
+        >
+    <s:layout>
+        <s:TileLayout
+                rowHeight="160"
+                columnWidth="160"/>
+    </s:layout>
+</s:DataGroup>
