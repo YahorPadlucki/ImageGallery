@@ -1,6 +1,5 @@
 # ImageGallery
-Image Galery
 
-Uses robotlegs framework with signals
-Includes FlexUnit tests
-Builds with Maven
+Uses robotlegs framework with signals<br />
+Includes FlexUnit tests<br />
+Builds with Maven<br />
